@@ -15,8 +15,9 @@ public class Flight {
     private final String destination;
     private LocalDateTime departDate;
     private LocalDateTime arrivalDate;
-    private final ArrayList<Passenger> passengers = new ArrayList<>();
-    
+    ArrayList<Passenger> passenger = new ArrayList<>();
+
+
     /**
      * Constructor that creates a flight for an airline.
      * @param flightNumber the number of the flight
@@ -26,6 +27,7 @@ public class Flight {
     public Flight(String flightNumber, String destination){
         this.flightNumber = flightNumber;
         this.destination = destination;
+
     }
 
     /**
@@ -93,7 +95,9 @@ public class Flight {
 
     public void createPassenger(String name, int age){
         Passenger p = new Passenger(name, age);
-        passengers.add(p);
+        passenger.add(p);
+
+
     }
     
     /**
@@ -111,7 +115,7 @@ public class Flight {
     // TODO: implement!
 
     public String getPassengers() {
-        return passengers.toString();
+       return Arrays.toString(passenger.toArray());
     }
 
     /**
@@ -151,5 +155,17 @@ public class Flight {
      * @return average age of passengers
      */
     // TODO: implement!
-    
+
+@Override
+    public String toString() {
+        String passengerlist = "";
+        /*for (String s : passenger){
+            passengerlist += s + "\t";
+        }*/
+        for(int i = 0; i < passenger.size(); i++){
+            passengerlist += passenger.get(i).getName() + " " + passenger.get(i).getAge();
+        }
+        return passengerlist;
+    }
+
 }

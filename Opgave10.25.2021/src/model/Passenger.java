@@ -51,5 +51,4 @@ public class Passenger {
         this.age = age;
     }
     
-    
 }

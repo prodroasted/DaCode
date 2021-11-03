@@ -13,8 +13,7 @@ public class FlightTest {
         flight.createPassenger("Linda", 59);
         flight.createPassenger("Jennifer", 65);
 
-
-        System.out.println(flight.getPassengers());
+        System.out.println(flight.toString());
         System.out.println(flight.getDestination());
         System.out.println(flight.getFlightNumber());
 
