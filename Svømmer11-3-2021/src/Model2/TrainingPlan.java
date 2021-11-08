@@ -17,7 +17,7 @@ public class TrainingPlan {
 		this.weeklyStrengthHours = weeklyStrengthHours;
 	}
 
-	public ArrayList<Swimmer> getSwimmers(TrainingPlan swimmer) {
+	public ArrayList<Swimmer> getSwimmers() {
 		return new ArrayList<Swimmer>(swimmers);
 	}
 

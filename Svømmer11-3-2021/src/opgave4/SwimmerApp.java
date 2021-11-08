@@ -1,10 +1,8 @@
-package Model2;
+package opgave4;
 
-import java.sql.SQLOutput;
 import java.util.ArrayList;
 
 public class SwimmerApp {
-
     public static void main(String[] args) {
 
         ArrayList<Double> lapTimes = new ArrayList<>();
@@ -42,17 +40,22 @@ public class SwimmerApp {
         swimmers.add(s2);
         swimmers.add(s3);
 
-
         TrainingPlan A = new TrainingPlan('A', 16, 10);
         TrainingPlan B = new TrainingPlan('B', 10, 6);
 
-        A.addSwimmer(s1);
-        A.addSwimmer(s2);
-        B.addSwimmer(s3);
+        Swimmer d = A.createSwimmer("Jens", 1930, lapTimes, "HE-Svømmeklub");
 
-        for (Swimmer s : A.getSwimmers()) {
-            System.out.println(s.getName());
-        }
+        System.out.println(A.getSwimmers().contains(d));
+
+        for (Swimmer s : A.getSwimmers())
+            System.out.println(s.getName() + "");
+
+        A.removeSwimmer(d);
+
+        for (Swimmer s : A.getSwimmers())
+            System.out.println(s.getName() + "");
+
+        System.out.println(A.getSwimmers().contains(d));
+
     }
 }
-
