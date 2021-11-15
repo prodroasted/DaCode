@@ -139,7 +139,7 @@ public class EmployeeWindow extends Stage {
 				boolean companyIsSelected = chbCompany.isSelected();
 				Company newCompany = cbbCompany.getSelectionModel().getSelectedItem();
 
-				// Call application.controller methods
+				// Call application.application.controller methods
 				if (employee != null) {
 					Controller.updateEmployee(employee, name, wage, employmentYear);
 					if (companyIsSelected) {

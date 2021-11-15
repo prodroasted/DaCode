@@ -106,7 +106,7 @@ public class CompanyWindow extends Stage {
 			if (hours < 0) {
 				lblError.setText("Hours is not a positive number");
 			} else {
-				// Call application.controller methods
+				// Call application.application.controller methods
 				if (company != null) {
 					Controller.updateCompany(company, name, hours);
 				} else {

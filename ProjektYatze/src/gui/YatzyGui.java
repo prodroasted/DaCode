@@ -12,10 +12,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-import model.Yatzy;
-import org.w3c.dom.events.Event;
+import application.model.Yatzy;
 
-import javax.swing.text.StyledEditorKit;
 import java.util.Arrays;
 
 public class YatzyGui extends Application {
@@ -230,10 +228,7 @@ public class YatzyGui extends Application {
 		return -1;
 	}
 
-	private void lockResult (TextField txf, int index) {
-		txf.setStyle("-tx-font-weight: bold; -fx-text-fill: blue; -fx-font-size: 7pt;");
-		(this.lockedResults[index] = Integer.parseInt(txf.getText());
-	}
+
 
 	private void updateSums () {
 

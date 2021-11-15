@@ -1,22 +1,16 @@
-package guifx;
+package Opg3.guifx;
 
-import java.util.ArrayList;
-import java.util.Optional;
-
-import application.controller.Controller;
-import application.model.Employee;
+import Opg3.application.controller.Controller;
+import Opg3.application.model.Employee;
 import javafx.beans.value.ChangeListener;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
+import javafx.scene.control.*;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+
+import java.util.Optional;
 
 public class EmployeePane extends GridPane {
 	private TextField txfName, txfWage, txfCompany, txfSalary, txfEmpYear;
@@ -106,7 +100,6 @@ public class EmployeePane extends GridPane {
 		// Wait for the modal dialog to close
 
 		lvwEmployees.getItems().setAll(Controller.getEmployees());
-
 		this.updateControls();
 	}
 

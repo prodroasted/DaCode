@@ -1,7 +1,7 @@
-package guifx;
+package Opg3.guifx;
 
-import application.controller.Controller;
-import application.model.Company;
+import Opg3.application.controller.Controller;
+import Opg3.application.model.Company;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
